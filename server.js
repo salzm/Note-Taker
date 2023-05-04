@@ -1,7 +1,6 @@
 const express = require("express");
 const path = require("path");
 const fs = require("fs");
-// const Data = require("./");
 
 // calling express
 const app = express();
@@ -21,7 +20,7 @@ app.use(express.static("public"));
 
 //GET REQUESTS
 
-app.get("/", (req, res) =>
+app.get("/notes", (req, res) =>
   res.sendFile(path.join(__dirname, "/public/notes.html"))
 );
 
