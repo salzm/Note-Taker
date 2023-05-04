@@ -1,12 +1,13 @@
 const express = require("express");
 const path = require("path");
 const fs = require("fs");
+// const Data = require("./");
 
 // calling express
 const app = express();
 
 // Delcaring port!
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 app.use(
   express.urlencoded({
@@ -20,9 +21,10 @@ app.use(express.static("public"));
 
 //GET REQUESTS
 
-app.get("/api/notes", function (req, res) {
-  readFileAsync("./db/db.json", "utf8").then(function (data) {
-    notes = [].concat(JSON.parse(data));
-    res.json(notes);
-  });
-});
+app.get("/", (req, res) =>
+  res.sendFile(path.join(__dirname, "/public/notes.html"))
+);
+
+app.listen(PORT, () =>
+  console.log(`App listening at http://localhost:${PORT} 🚀`)
+);
