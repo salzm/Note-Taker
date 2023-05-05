@@ -16,3 +16,4 @@ In the server.js file, we needed to connect the front end with the server in ord
 Source / Credits :
 
 Website URL!!
+https://note-takerz.herokuapp.com/
