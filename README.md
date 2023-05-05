@@ -10,7 +10,8 @@ This project was to demonstrate to use backend and frontend. Using Node js and E
 
 In the server.js file, we needed to connect the front end with the server in order to see the second html page called notes.html. From there, I needed to make sure the notes the client adds to the server is stored without local storage. I used express js notation and node js to make sure the server works and runs properly. From there, I deployed the application in heroku.
 
-![alt text](./)
+![alt text](./public/assets/Home.png)
+![alt text](./public/assets/Notes.png)
 
 Source / Credits :
 
